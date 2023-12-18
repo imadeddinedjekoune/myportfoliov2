@@ -1,0 +1,725 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="{% static 'image/favicon.png' %}" type="image/x-icon">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+        <title>My Portfolio - Imad Eddine Djekoune</title>
+        <meta property="og:title" content="My Awesome Website">
+  <meta property="og:description" content="Explore the awesomeness of my website!">
+  <meta property="og:image" content="{% static 'image/Imad2.png' %}">
+  <meta property="og:url" content="https://www.example.com">
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav logo">
+                    <img src="{% static 'image/Imad2.png' %}" style="width: 60%;">
+                </a>
+                <div id="nav-menu" class="nav__menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="ri-home-5-line"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="ri-trophy-line"></i> Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#qualification" class="nav__link">
+                                <i class="ri-book-open-line"></i> Qualification
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class="ri-briefcase-line"></i> Services
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">
+                                <i class="ri-image-line"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="ri-chat-3-line"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Close button -->
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <div class="nav__buttons">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <!-- Toggle button -->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-4-line"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+             
+                <div id="blankElement" class="home__container container grid section__border" style="
+    margin-top: 1000px;
+">
+                    <div class="home__data grid">
+                        <h2 class="home__title" >
+                            Hi, I'm Imad Eddine <br>
+                            a Software Engineer <br>
+                            Specilised In Computer Vision <br>
+                        </h2>
+                        <div class="home__blob grid">
+                            <div class="home__perfil">
+                                <img src="{% static 'image/imadeddine.png' %}" alt="home perfil">
+                            </div>
+
+                            <img src="{% static 'image/shape-wawes.svg' %}" alt="" class="home__shape-waves">
+
+                            <img src="{% static 'image/shape-circle.svg' %}" alt="" class="home__shape-circle">
+                        </div>
+                        <div class="home__social">
+                            <button id="show-pdf" class="button-30" role="button">Download CV</button>
+                        </div>
+
+                        <script>
+                            document.getElementById("show-pdf").addEventListener("click", function () {
+                                var pdfUrl = "{% static 'pdf/CV de Imad Eddine Djekoune.pdf' %}";
+                                window.open(pdfUrl, '_blank');
+                            });
+                        </script>
+
+                        <ul class="home__social">
+                            <a href="https://www.linkedin.com/in/imad-eddine-djekoune/" target="_blank" class="home__social-link">
+                                <i class="ri-linkedin-box-line"></i>
+                            </a>
+                            <a href="https://github.com/imadeddinedjekoune" target="_blank" class="home__social-link">
+                                <i class="ri-github-line"></i>
+                            </a>
+                            <a href="https://www.instagram.com/djekouneimad/" target="_blank" class="home__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>                           
+                        </ul>
+                    </div>
+
+                    <!--==================== HOME INFO 1 ====================-->
+                    <div class="home__info">
+                        <div>
+                            <h3 class="home__info-title">
+                                BIOGRAPHY
+                            </h3>
+                            <p class="home__info-description">
+                                Greetings, I'm Imad, a Computer Science enthusiast hailing from Algiers, with a strong focus on the fascinating realms of Computer Vision and AI.
+                                <br>
+                                <br>
+                            </p>
+                            <h3 class="home__info-title">
+                                CONTACT
+                            </h3>
+                            <p class="home__info-description">
+                                Algiers, Algeria <br>
+                                imaddjekoune@gmail.com <br>
+                                +213 657 05 13 49 <br>
+                                <br>
+                                <br>
+                            </p>
+                            <h3 class="home__info-title">
+                                KNOWLEDGE
+                            </h3>
+                            <p class="home__info-description">
+                                Image Processing <br>
+                                Feature Extraction <br>
+                                Machine Learning <br>
+                                Deep Learning <br>
+                                Image Recognition <br>
+                                <br>
+                                <br>
+
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!--==================== HOME INFO 2 ====================-->
+                    <div class="home__info">
+                        <div>
+                            <h3 class="home__info-title">
+                                YEARS OF EXPERIENCE
+                            </h3>
+                            <p class="home__info-number">
+                                02+
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="home__info-title">
+                                COMPLETED PROJECTS
+                            </h3>
+                            <p class="home__info-number">
+                                32+
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="home__info-title">
+                                COMPANIES WORKED
+                            </h3>
+                            <p class="home__info-number">
+                                02+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section" id="skills">
+                <h2 class="section__title">Skills</h2>
+                <span class="section__subtitle">My favorite skills</span>
+                
+                <div class="skills__container container grid section__border">
+                    <!--==================== SKILLS 1 ====================-->
+                    <div class="skills__content">
+                        <h3 class="skills__title">
+                            <i class="ri-braces-line"></i>Languages and Technologies
+                        </h3>
+                        <div class="skills__info">
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/python-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Python</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/java-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Java</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/logo-javascript.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">JavaScript</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/c.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">C++</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/c--4.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">C#</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/sqlite-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">SQL</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/php-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Php</h3>
+                                <span class="skills__subtitle">Basic</span>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/git-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Git</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--==================== SKILLS 2 ====================-->
+                    <div class="skills__content">
+                        <h3 class="skills__title">
+                            <i class="ri-pantone-line"></i>Frameworks and Libraries
+                        </h3>
+                        <div class="skills__info">
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/tensorflow-2.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">TensorFlow</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/PyTorch_logo_black.svg' %}" alt="skills image" style="width: 80px;">
+                                </div>
+                                <h3 class="skills__name">Pytorch</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/OpenCV_Logo_with_text_svg_version.svg' %}" alt="skills image" >
+                                </div>
+                                <h3 class="skills__name">Open CV</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/Android_Studio_Icon_3.6.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Android<br>Studio</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/flutterio-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Flutter</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/unity3d-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Unity</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/Blender_logo_no_text.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Blender</h3>
+                                <span class="skills__subtitle">Advanced</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/django-icon-svgrepo-com.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Django</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__blob">
+
+                                    <img src="{% static 'image/laravel-icon.svg' %}" alt="skills image">
+                                </div>
+                                <h3 class="skills__name">Laravel</h3>
+                                <span class="skills__subtitle">Intermediate</span>
+                            </div>
+                            
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section" id="qualification">
+                <h2 class="section__title">Qualification</h2>
+                <span class="section__subtitle">Experience & Education</span>
+                
+                <div class="qualification__container container grid section__border">
+                    <!--==================== QUALIFICATION 1 ====================-->
+                    <div class="qualification__content">
+                        <h3 class="qualification__title">
+                            <i class="ri-pencil-ruler-2-line"></i> Education
+                        </h3>
+                        <div class="qualification__info">
+                            <div>
+                                <h3 class="qualification__name">
+                                    Mathematics Baccalaureate
+                                </h3>
+                                <span class="qualification__country">Algiers - Algeria</span>
+                                <span class="qualification__year">2017 - 2018</span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__name">
+                                    License in Information<br>Systems and Software <br>Engineering
+                                </h3>
+                                <span class="qualification__country">USTHB</span>
+                                <span class="qualification__year">2020- 2021</span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__name">
+                                    Master's in Computer Vision
+                                </h3>
+                                <span class="qualification__country">USTHB</span>
+                                <span class="qualification__year">2022 - 2023</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== QUALIFICATION 2 ====================-->
+                    <div class="qualification__content">
+                        <h3 class="qualification__title">
+                            <i class="ri-building-line"></i> Work
+                        </h3>
+                        <div class="qualification__info">
+                            <div>
+                                <h3 class="qualification__name">
+                                    Intern in Virtual Reality
+                                </h3>
+                                <span class="qualification__country">CDTA - Algiers</span>
+                                <span class="qualification__year">2018 - 2019</span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__name">
+                                    Creating a Virtual Environment<br>for Petroleum Drilling Learning
+                                </h3>
+                                <span class="qualification__country">Sonatrach DG - Hydra</span>
+                                <span class="qualification__year">2022 - 2023</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <img src="{% static 'image/shape-circle.svg' %}" alt="Qualification Image" class="qualification__img">
+            </section>
+
+            <!--==================== SERVICES ====================-->
+            <section class="services section" id="services">
+                <h2 class="section__title">Services</h2>
+                <span class="section__subtitle">What i offer</span>
+
+                <div class="services__container container grid section__border">
+                    <div class="services__card" >
+                        <i class="ri-computer-line"></i>
+                        <h2 class="services__title">
+                            Computer <br>
+                            Vision
+                        </h2>
+                        <p class="services__description">
+                            Skilled in computer vision, adept in image processing, object detection, and recognition using OpenCV and TensorFlow.
+                        </p>
+                        <div class="services__border"></div>
+                    </div>
+                    <div class="services__card">
+                        <i class="ri-robot-line"></i>
+                        <h2 class="services__title">
+                            Machine <br>
+                            Learning
+                        </h2>
+                        <p class="services__description">
+                            Expert in ML techniques, hands-on model building, specializing in neural networks, deep and reinforcement learning.
+                        </p>
+                        <div class="services__border"></div>
+                    </div>
+                    <div class="services__card">
+                        <i class="ri-window-2-line"></i>
+                        <h2 class="services__title">
+                            Software <br>
+                            Development 
+                        </h2>
+                        <p class="services__description">
+                            Strong CS background, skilled in Python, C++, Java for seamless AI-integrated software development.
+                        </p>
+                        <div class="services__border"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================== PROJECTS ====================-->
+            <section class="projects section" id="projects">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">Most recent work</span>
+
+                <div class="container section__border">
+                    <div class="projects__container swiper">
+                        <div class="swiper-wrapper">
+                            <!--==================== PROJECT 1 ====================-->
+                            <div class ="projects__content swiper-slide">
+                                <img src="{% static 'image/proj1.jpg' %}" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle">AI and ML</span>
+                                    <h1 class="projects__title">3D Hand Traking</h1>
+
+                                    <a href="https://github.com/imadeddinedjekoune/Hand-Detection-3D" class="projects__button">
+                                        View demo <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 3 ====================-->
+                            <div class ="projects__content swiper-slide">
+                                <img src="{% static 'image/proj31.jpg' %}" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle">Networking</span>
+                                    <h1 class="projects__title">Wireless AeroPort Manager</h1>
+
+                                    <a href="https://github.com/imadeddinedjekoune/Wireless-AeroPort-Manager" class="projects__button">
+                                        View demo <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 2 ====================-->
+                            <div class ="projects__content swiper-slide">
+                                <img src="{% static 'image/proj22.jpg' %}" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle">Augmented Reality</span>
+                                    <h1 class="projects__title">AR World Collision</h1>
+
+                                    <a href="https://github.com/imadeddinedjekoune/AR-Real-World-Physics" class="projects__button">
+                                        View demo <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            
+
+                            <!--==================== PROJECT 4 ====================-->
+                            <div class ="projects__content swiper-slide">
+                                <img src="{% static 'image/proj4.jpg' %}" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle">AI and ML</span>
+                                    <h1 class="projects__title">Car Number Plate Recognition</h1>
+
+                                    <a href="https://github.com/imadeddinedjekoune/Car-Number-Plate-Recognition" class="projects__button">
+                                        View demo <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 5 ====================-->
+                            <div class ="projects__content swiper-slide">
+                                <img src="{% static 'image/proj5.jpg' %}" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle">Software Developement</span>
+                                    <h1 class="projects__title">Sonatrach Contract Reader</h1>
+
+                                    <a href="https://github.com/imadeddinedjekoune/Sonatrach-Contract-Reader" class="projects__button">
+                                        View demo <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 6 ====================-->
+                            <div class ="projects__content swiper-slide">
+                                <img src="{% static 'image/proj6.jpg' %}" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle">AI and ML</span>
+                                    <h1 class="projects__title">Face Tracking</h1>
+
+                                    <a href="https://github.com/imadeddinedjekoune/FaceTracking" class="projects__button">
+                                        View demo <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!--==================== PROJECT 7 ====================-->
+                            <div class ="projects__content swiper-slide">
+                                <img src="{% static 'image/Capture.jpg' %}" alt="projects image" class="projects__img">
+
+                                <div>
+                                    <span class="projects__subtitle">Web</span>
+                                    <h1 class="projects__title">E-Commerce Website</h1>
+
+                                    <a href="https://github.com/imadeddinedjekoune/ECom-Website" class="projects__button">
+                                        View demo <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        
+                        <!-- Swiper arrows -->
+                        <div class="swiper-button-next">
+                            <i class="ri-arrow-right-s-line"></i>
+                        </div>
+                        <div class="swiper-button-prev">
+                            <i class="ri-arrow-left-s-line"></i>
+                        </div>
+
+                        <!-- Swiper pagination -->
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== TESTIMONIAL ====================-->
+            
+
+            <!--==================== CONTACT ====================-->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in touch</span>
+                <div class="contact__container container grid section__border">
+                    <div class="contact__content">
+                        <h3 class="contact__title">
+                            <i class="ri-chat-3-line"></i> Reach Out
+                        </h3>
+                        <div class="contact__info">
+                            <div class="contact__data">
+                                <span class="contact__data-title">Email</span>
+                                <span class="contact__data-info">imaddjekoune@gmail.com</span>
+                            </div>
+                            <div class="contact__data">
+                                <span class="contact__data-title">WhatsApp</span>
+                                <span class="contact__data-info">+213 657051349</span>
+                               
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="contact__content">
+                        <h3 class="contact__title">
+                            <i class="ri-send-place-line"></i> Contact Me
+                        </h3>
+
+                        <form method="POST" action="#contact" class="contact__form" >
+                            {% csrf_token %}
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Name</label>
+                                <input type="text" name="user_name" id="contact-name" required placeholder="Write your name" class="contact__form-input">
+                            </div>
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Mail</label>
+                                <input type="text" name="user_email" id="contact-email" required placeholder="Write your email" class="contact__form-input">
+                            </div>
+                            <div class="contact__form-div contact__form-area">
+                                <label class="contact__form-tag">Context</label>
+                                <textarea type="text" name="user_project" id="contact-project" required placeholder="Write your project" class="contact__form-input"></textarea>
+                            </div>
+
+                            <p class="contact__message" id="contact-message">Message</p>
+
+                            <button class="contact__button" type="submit">
+                                Submit <i class="ri-arrow-right-up-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container">
+                <h1 class="footer__title">Djekoune Imad Eddine</h1>
+                <p>Computer Vision Developer</p>
+
+                <ul class="footer__list">
+                    <li>
+                        <a href="#home" class="footer__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="footer__link">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="footer__link">Projects</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__social">
+                    <a href="https://www.linkedin.com/in/imad-eddine-djekoune/" target="_blank" class="footer__social-link">
+                        <i class="ri-linkedin-box-line"></i>
+                    </a>
+
+                    <a href="https://github.com/imadeddinedjekoune" target="_blank" class="footer__social-link">
+                        <i class="ri-github-line"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/djekouneimad/" target="_blank" class="footer__social-link">
+                         <i class="ri-instagram-line"></i>
+                    </a>
+
+
+                </ul>
+
+                <span class="footer__copy">
+                    &#169; Copyright Imad Eddine Djekoune. All rights reserved
+                </span>
+            </div>
+        </footer>
+
+
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="{% static 'js/scrollreveal.min.js' %}"></script>
+
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+        
+        <!--=============== EMAIL JS ===============-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        
+
+        <!--=============== MAIN JS ===============-->
+        <script src="{% static 'js/main.js' %}"></script>
+
+
+        <script type="text/javascript">
+         var elementToModify = document.getElementById("blankElement");
+   elementToModify.style.marginTop = "0px";
+        </script>
+    </body>
+</html>
